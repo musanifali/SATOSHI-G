@@ -70,10 +70,6 @@ const Header = () => {
 
         {/* Desktop Right side actions */}
         <div className="hidden md:flex items-center space-x-4">
-          <Button variant="ghost" size="sm" className="hidden sm:inline-flex">
-            <Waves className="mr-2 h-4 w-4" />
-            Whitepaper
-          </Button>
           <Button size="sm" className="bg-gradient-to-r from-accent to-primary hover:from-accent/90 hover:to-primary/90 text-white">
             <Bitcoin className="mr-2 h-4 w-4" />
             Start Investing
@@ -144,15 +140,6 @@ const Header = () => {
               
               {/* Mobile Action Buttons */}
               <div className="pt-4 space-y-3 border-t border-border/40">
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
-                  className="w-full justify-start"
-                  onClick={closeMobileMenu}
-                >
-                  <Waves className="mr-2 h-4 w-4" />
-                  Whitepaper
-                </Button>
                 <Button 
                   size="sm" 
                   className="w-full bg-gradient-to-r from-accent to-primary hover:from-accent/90 hover:to-primary/90 text-white"

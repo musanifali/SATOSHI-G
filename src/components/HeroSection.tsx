@@ -50,7 +50,7 @@ const HeroSection = () => {
             <motion.div 
               animate={{ y: [-10, 10, -10], rotate: [-2, 2, -2] }}
               transition={{ duration: 6, repeat: Infinity, delay: 2 }}
-              className="absolute bottom-8 left-1/2 transform -translate-x-1/2 bg-green-500 text-white px-6 py-3 rounded-full text-sm font-bold shadow-xl backdrop-blur-sm border-2 border-white/20"
+              className="absolute bottom-8 left-8 bg-green-500 text-white px-6 py-3 rounded-full text-sm font-bold shadow-xl backdrop-blur-sm border-2 border-white/20"
             >
               🌿 100% Sustainable
             </motion.div>
