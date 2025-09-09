@@ -1,6 +1,9 @@
 import Header from '@/components/Header'
 import HeroSection from '@/components/HeroSection'
+import MetricsSection from '@/components/MetricsSection'
 import AboutSection from '@/components/AboutSection'
+import WhatWeDoSection from '@/components/WhatWeDoSection'
+import TestimonialsSection from '@/components/TestimonialsSection'
 import ProblemSolutionSection from '@/components/ProblemSolutionSection'
 import MarketOpportunitySection from '@/components/MarketOpportunitySection'
 import HowItWorksSection from '@/components/HowItWorksSection'
@@ -11,6 +14,7 @@ import SustainabilitySection from '@/components/SustainabilitySection'
 import TeamSection from '@/components/TeamSection'
 import LocationSection from '@/components/LocationSection'
 import RoadmapSection from '@/components/RoadmapSection'
+import NewsletterSection from '@/components/NewsletterSection'
 import FinalCTASection from '@/components/FinalCTASection'
 import Footer from '@/components/Footer'
 
@@ -18,19 +22,34 @@ export default function Home() {
   return (
     <main className="min-h-screen">
       <Header />
+      
+      {/* 🎯 HERO & TRUST */}
       <HeroSection />
+      <MetricsSection />
+      
+      {/* 🏢 COMPANY & SERVICES */}
       <AboutSection />
+      <WhatWeDoSection />
+      <TestimonialsSection />
+      
+      {/* 💼 INVESTMENT OPPORTUNITY */}
       {/* <ProblemSolutionSection /> */}
       <MarketOpportunitySection />
       <HowItWorksSection />
       <ProjectDevelopmentSection />
+      
+      {/* 🏗️ DEVELOPMENT SPECIFIC (For later) */}
       {/* <TokenomicsSection /> */}
-      {/* <TargetUsersSection />
-      <SustainabilitySection />
+      {/* <TargetUsersSection /> */}
+      {/* <SustainabilitySection /> */}
+      {/* <LocationSection /> */}
+      {/* <RoadmapSection /> */}
+      
+      {/* 👥 AUTHORITY & CONVERSION */}
       <TeamSection />
-      <LocationSection />
-      <RoadmapSection /> */}
+      <NewsletterSection />
       <FinalCTASection />
+      
       <Footer />
     </main>
   )

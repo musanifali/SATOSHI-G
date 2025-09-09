@@ -1,5 +1,5 @@
 import { Card, CardContent, CardHeader } from "@/components/ui/card"
-import { Avatar, AvatarFallback } from "@/components/ui/avatar"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Badge } from "@/components/ui/badge"
 import { 
   Users, 
@@ -20,6 +20,7 @@ const TeamSection = () => {
       expertise: "25+ years investment strategies",
       description: "Visionary leader with decades of experience in strategic investment planning and wealth management.",
       initials: "RV",
+      avatar: "/images/team/richard-vanderbilt.jpg",
       color: "bg-accent",
       icon: TrendingUp
     },
@@ -29,6 +30,7 @@ const TeamSection = () => {
       expertise: "AI, Blockchain, Software",
       description: "Technology executive specializing in artificial intelligence, blockchain development, and software architecture.",
       initials: "JC",
+      avatar: "/images/team/jbk-caan.jpg",
       color: "bg-primary",
       icon: Brain
     },
@@ -38,6 +40,7 @@ const TeamSection = () => {
       expertise: "Ex-KPMG Oil & Gas Expert",
       description: "Former KPMG partner with extensive experience in oil & gas sector and energy infrastructure development.",
       initials: "FK",
+      avatar: "/images/team/faisal-khan.jpg",
       color: "bg-green-500",
       icon: Building
     },
@@ -47,6 +50,7 @@ const TeamSection = () => {
       expertise: "31 years Bahamas & Paraguay",
       description: "Three decades of experience in strategic land acquisitions across the Caribbean and South America.",
       initials: "MF",
+      avatar: "/images/team/michael-fothergill.jpg",
       color: "bg-blue-500",
       icon: Globe
     },
@@ -56,6 +60,7 @@ const TeamSection = () => {
       expertise: "DC-based Lobbyist",
       description: "Washington DC-based blockchain policy advocate and government relations expert.",
       initials: "TW",
+      avatar: "/images/team/todd-white.jpg",
       color: "bg-purple-500",
       icon: Scale
     },
@@ -65,6 +70,7 @@ const TeamSection = () => {
       expertise: "Author of 'Finding Satoshi'",
       description: "Strategic communications expert and published author specializing in blockchain and cryptocurrency education.",
       initials: "IM",
+      avatar: "/images/team/ivy-mclemore.jpg",
       color: "bg-pink-500",
       icon: BookOpen
     }
@@ -103,6 +109,7 @@ const TeamSection = () => {
                 <CardHeader className="text-center pb-4">
                   <div className="relative mb-6">
                     <Avatar className="w-24 h-24 mx-auto mb-4 border-4 border-background shadow-xl">
+                      <AvatarImage src={member.avatar} alt={member.name} className="object-cover" />
                       <AvatarFallback className={`${member.color} text-white text-xl font-bold`}>
                         {member.initials}
                       </AvatarFallback>

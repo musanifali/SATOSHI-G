@@ -29,22 +29,34 @@ const WhatWeDoSection = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-2 gap-4">
-            <div className="bg-card border border-border rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
-              <div className="text-3xl font-bold text-primary mb-2">360°</div>
-              <div className="text-sm text-muted-foreground">Complete Service</div>
+          <div className="relative">
+            {/* Main Ecosystem Illustration */}
+            <div className="bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10 rounded-2xl p-8 mb-6">
+              <img 
+                src="/images/real-estate/real-estate-ecosystem.jpg"
+                alt="SATOSHI Real Estate Ecosystem - Complete Platform"
+                className="w-full h-64 object-cover rounded-xl shadow-lg"
+              />
             </div>
-            <div className="bg-card border border-border rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
-              <div className="text-3xl font-bold text-accent mb-2">24/7</div>
-              <div className="text-sm text-muted-foreground">Support Available</div>
-            </div>
-            <div className="bg-card border border-border rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
-              <div className="text-3xl font-bold text-secondary-foreground mb-2">100%</div>
-              <div className="text-sm text-muted-foreground">Digital Process</div>
-            </div>
-            <div className="bg-card border border-border rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
-              <div className="text-3xl font-bold text-primary mb-2">1M+</div>
-              <div className="text-sm text-muted-foreground">Properties Listed</div>
+            
+            {/* Stats Grid Below Image */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="bg-card border border-border rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
+                <div className="text-3xl font-bold text-primary mb-2">360°</div>
+                <div className="text-sm text-muted-foreground">Complete Service</div>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
+                <div className="text-3xl font-bold text-accent mb-2">24/7</div>
+                <div className="text-sm text-muted-foreground">Support Available</div>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
+                <div className="text-3xl font-bold text-secondary-foreground mb-2">100%</div>
+                <div className="text-sm text-muted-foreground">Digital Process</div>
+              </div>
+              <div className="bg-card border border-border rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
+                <div className="text-3xl font-bold text-primary mb-2">1M+</div>
+                <div className="text-sm text-muted-foreground">Properties Listed</div>
+              </div>
             </div>
           </div>
         </div>

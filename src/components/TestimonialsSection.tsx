@@ -15,7 +15,7 @@ const TestimonialsSection = () => {
       location: "Dubai, UAE",
       rating: 5,
   content: "SATOSHI made my real estate investment journey seamless. Their mortgage team found me the best rates, and the entire process was transparent and professional. I've now purchased 3 properties through their platform.",
-      avatar: "/api/placeholder/60/60",
+      avatar: "/images/testimonials/sarah-al-mansouri.jpg",
       initials: "SA"
     },
     {
@@ -25,7 +25,7 @@ const TestimonialsSection = () => {
       location: "Abu Dhabi, UAE",
       rating: 5,
   content: "As a first-time buyer, I was overwhelmed by the process. SATOSHI's team guided me every step of the way, from finding the right property to securing my golden visa. Exceptional service!",
-      avatar: "/api/placeholder/60/60",
+      avatar: "/images/testimonials/ahmed-hassan.jpg",
       initials: "AH"
     },
     {
@@ -35,7 +35,7 @@ const TestimonialsSection = () => {
       location: "Dubai, UAE",
       rating: 5,
   content: "Working with SATOSHI as a partner has been incredible. Their SATOSHI One platform streamlines everything for my clients. The technology and support team are world-class.",
-      avatar: "/api/placeholder/60/60",
+      avatar: "/images/testimonials/maria-rodriguez.jpg",
       initials: "MR"
     },
     {
@@ -45,7 +45,7 @@ const TestimonialsSection = () => {
       location: "Sharjah, UAE",
       rating: 5,
   content: "The golden visa process was so much smoother than I expected. SATOSHI handled everything professionally and kept me informed throughout. Now I'm a permanent resident through my property investment!",
-      avatar: "/api/placeholder/60/60",
+      avatar: "/images/testimonials/james-thompson.jpg",
       initials: "JT"
     },
     {
@@ -55,7 +55,7 @@ const TestimonialsSection = () => {
       location: "Dubai, UAE",
       rating: 5,
   content: "SATOSHI's blocks platform has been a game-changer for our project sales. The integration with their ecosystem brings serious, qualified investors to our developments.",
-      avatar: "/api/placeholder/60/60",
+      avatar: "/images/testimonials/fatima-al-zahra.jpg",
       initials: "FZ"
     }
   ]

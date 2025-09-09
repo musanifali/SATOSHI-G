@@ -20,15 +20,19 @@ const HeroSection = () => {
         >
           {/* Main Illustration Container - Full width and height */}
           <div className="relative w-full h-full">
+            {/* Main Hero Image */}
             <img 
-              src="/images/illustrations/island (1).jpg"
-              alt="Satoshi Global Village - Luxury Island Paradise"
+              src="/images/real-estate/rum-cay-aerial.jpg"
+              alt="Rum Cay Luxury Island Paradise - Aerial View"
               className="w-full h-full object-cover"
               style={{
                 maxWidth: '100%',
                 maxHeight: '100%'
               }}
             />
+            
+            {/* Overlay for better text readability */}
+            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
             
             {/* Floating Achievement Badges */}
             <motion.div 

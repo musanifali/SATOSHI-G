@@ -52,8 +52,13 @@ const NewsletterSection = () => {
   }
 
   return (
-    <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-r from-primary/10 to-accent/10">
-      <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+    <section className="py-16 md:py-24 lg:py-32 bg-gradient-to-r from-primary/10 to-accent/10 relative overflow-hidden">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-accent/5"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-primary/10 to-transparent rounded-full blur-3xl"></div>
+      <div className="absolute bottom-0 left-0 w-96 h-96 bg-gradient-to-tr from-accent/10 to-transparent rounded-full blur-3xl"></div>
+      
+      <div className="container mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center">
           {/* Icon */}
           <div className="mx-auto w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mb-8">
