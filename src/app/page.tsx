@@ -30,13 +30,13 @@ export default function Home() {
       {/* 🏢 COMPANY & SERVICES */}
       <AboutSection />
       <WhatWeDoSection />
-      <TestimonialsSection />
+      <ProjectDevelopmentSection />
       
       {/* 💼 INVESTMENT OPPORTUNITY */}
       {/* <ProblemSolutionSection /> */}
       <MarketOpportunitySection />
       <HowItWorksSection />
-      <ProjectDevelopmentSection />
+      <TestimonialsSection />
       
       {/* 🏗️ DEVELOPMENT SPECIFIC (For later) */}
       {/* <TokenomicsSection /> */}
@@ -46,7 +46,7 @@ export default function Home() {
       {/* <RoadmapSection /> */}
       
       {/* 👥 AUTHORITY & CONVERSION */}
-      <TeamSection />
+      {/* <TeamSection /> */}
       <NewsletterSection />
       <FinalCTASection />
       

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import SatoshiLoader from '@/components/SatoshiLoader'
+import { ThemeProvider } from '@/contexts/ThemeContext'
 
 interface ClientWrapperProps {
   children: React.ReactNode
@@ -27,7 +28,7 @@ export default function ClientWrapper({ children }: ClientWrapperProps) {
   }
 
   return (
-    <>
+    <ThemeProvider>
       {isVisible && (
         <SatoshiLoader 
           isLoading={isLoading} 
@@ -37,6 +38,6 @@ export default function ClientWrapper({ children }: ClientWrapperProps) {
       <div className={isLoading ? 'opacity-0' : 'opacity-100 transition-opacity duration-500'}>
         {children}
       </div>
-    </>
+    </ThemeProvider>
   )
 }

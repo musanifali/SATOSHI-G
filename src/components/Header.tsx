@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { LogIn, Phone, Bitcoin, Waves, Menu, X } from 'lucide-react'
 import { useState } from 'react'
+import ThemeSelector from './ThemeSelector'
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -22,47 +23,45 @@ const Header = () => {
         {/* Logo */}
         <Link 
           href="/" 
-          className="flex items-center space-x-3 font-bold text-xl"
+          className="flex items-center"
           onClick={closeMobileMenu}
         >
-          <div className="w-8 h-8 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center">
-            <Bitcoin className="w-5 h-5 text-white" />
-          </div>
-          <div className="flex flex-col">
-            <span className="text-primary text-lg leading-tight">SATOSHI</span>
-            <span className="text-accent text-xs font-medium leading-tight">Global Village</span>
-          </div>
+          <img 
+            src="/images/illustrations/satoshi logo.svg"
+            alt="SATOSHI Global Village"
+            className="h-8 w-auto dark:invert dark:brightness-0 dark:contrast-100"
+          />
         </Link>
 
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex items-center space-x-8">
           <Link 
             href="#project" 
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            className="text-sm font-medium text-foreground transition-colors hover:text-primary"
           >
             Project
           </Link>
           <Link 
             href="#tokenomics" 
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            className="text-sm font-medium text-foreground transition-colors hover:text-primary"
           >
             Tokenomics
           </Link>
           <Link 
             href="#team" 
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            className="text-sm font-medium text-foreground transition-colors hover:text-primary"
           >
             Team
           </Link>
           <Link 
             href="#rum-cay" 
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            className="text-sm font-medium text-foreground transition-colors hover:text-primary"
           >
             Rum Cay
           </Link>
           <Link 
             href="#invest" 
-            className="text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            className="text-sm font-medium text-foreground transition-colors hover:text-primary"
           >
             Invest
           </Link>
@@ -70,9 +69,10 @@ const Header = () => {
 
         {/* Desktop Right side actions */}
         <div className="hidden md:flex items-center space-x-4">
+          <ThemeSelector />
           <Button size="sm" className="bg-gradient-to-r from-accent to-primary hover:from-accent/90 hover:to-primary/90 text-white">
             <Bitcoin className="mr-2 h-4 w-4" />
-            Start Investing
+           Get Started 
           </Button>
         </div>
 
@@ -140,6 +140,9 @@ const Header = () => {
               
               {/* Mobile Action Buttons */}
               <div className="pt-4 space-y-3 border-t border-border/40">
+                <div className="flex justify-center">
+                  <ThemeSelector />
+                </div>
                 <Button 
                   size="sm" 
                   className="w-full bg-gradient-to-r from-accent to-primary hover:from-accent/90 hover:to-primary/90 text-white"

@@ -3,8 +3,12 @@
 import { motion } from 'motion/react'
 import { Button } from '@/components/ui/button'
 import { ArrowRight, Play } from 'lucide-react'
+import { useState } from 'react'
 
 const HeroSection = () => {
+  const [videoLoaded, setVideoLoaded] = useState(false)
+  const [videoError, setVideoError] = useState(false)
+
   return (
     <section className="relative min-h-screen overflow-hidden">
       {/* Part 1: Illustration Section */}
@@ -20,19 +24,40 @@ const HeroSection = () => {
         >
           {/* Main Illustration Container - Full width and height */}
           <div className="relative w-full h-full">
-            {/* Main Hero Image */}
-            <img 
-              src="/images/real-estate/rum-cay-aerial.jpg"
-              alt="Rum Cay Luxury Island Paradise - Aerial View"
+            {/* Main Hero Video */}
+            <video 
+              autoPlay
+              muted
+              loop
+              playsInline
+              preload="metadata"
+              onLoadedData={() => setVideoLoaded(true)}
+              onError={() => setVideoError(true)}
               className="w-full h-full object-cover"
               style={{
                 maxWidth: '100%',
                 maxHeight: '100%'
               }}
-            />
+            >
+              <source src="/images/illustrations/video.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+            
+            {/* Fallback image if video doesn't load or has errors */}
+            {(!videoLoaded || videoError) && (
+              <img 
+                src="/images/real-estate/rum-cay-aerial.jpg"
+                alt="Rum Cay Luxury Island Paradise - Aerial View"
+                className="absolute inset-0 w-full h-full object-cover"
+                style={{
+                  maxWidth: '100%',
+                  maxHeight: '100%'
+                }}
+              />
+            )}
             
             {/* Overlay for better text readability */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+            <div className="hero-overlay opacity-10 absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
             
             {/* Floating Achievement Badges */}
             <motion.div 
@@ -74,10 +99,10 @@ const HeroSection = () => {
             transition={{ duration: 2, repeat: Infinity }}
             className="absolute bottom-6 left-1/2 transform -translate-x-1/2"
           >
-            <div className="flex flex-col items-center text-muted-foreground">
-              <span className="text-sm font-medium mb-2">Scroll to explore</span>
-              <div className="w-6 h-10 border-2 border-muted-foreground/50 rounded-full flex justify-center">
-                <div className="w-1 h-3 bg-muted-foreground/70 rounded-full mt-2 animate-pulse"></div>
+            <div className="flex flex-col items-center text-foreground/80">
+              <span className="text-sm font-medium mb-2 text-foreground/90">Scroll to explore</span>
+              <div className="w-6 h-10 border-2 border-foreground/70 rounded-full flex justify-center">
+                <div className="w-1 h-3 bg-foreground/80 rounded-full mt-2 animate-pulse"></div>
               </div>
             </div>
           </motion.div>

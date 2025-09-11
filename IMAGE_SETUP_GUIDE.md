@@ -1,9 +1,11 @@
 # 🖼️ SATOSHI-G Image Setup Guide
 
 ## ✅ COMPLETED
+
 Your website now has all required image paths set up and working! I've used your existing island images as placeholders.
 
 ## 📁 Current Image Structure:
+
 ```
 public/images/
 ├── real-estate/           ✅ COMPLETE
@@ -23,20 +25,25 @@ public/images/
 ## 🎯 NEXT STEPS TO UPGRADE:
 
 ### 1. Real Estate Images (Replace placeholders)
+
 **Current**: Using your island images as placeholders
 **Upgrade to**: Professional real estate photos
 
 **Recommended Sources:**
+
 - **Unsplash.com**: Search "luxury resort bahamas", "caribbean villa", "yacht marina"
 - **Pexels.com**: Search "luxury real estate", "resort development", "golf course aerial"
 - **Shutterstock**: Premium real estate photography
 
 **Size Requirements:**
+
 - Hero: 1920x1080px (16:9 ratio)
 - Others: 800x600px (4:3 ratio)
 
 ### 2. Team Photos (Currently missing)
+
 **Need**: Professional headshots for:
+
 - Richard Vanderbilt (Founder)
 - JBK Caan (CEO)
 - Faisal Khan (CEO Ovex Technologies)
@@ -48,7 +55,9 @@ public/images/
 **Source**: LinkedIn-style professional headshots
 
 ### 3. Testimonial Photos (Currently missing)
+
 **Need**: Customer photos for:
+
 - Sarah Al-Mansouri
 - Ahmed Hassan
 - Maria Rodriguez
@@ -68,15 +77,18 @@ public/images/
 ## 💡 PRO TIPS:
 
 ### Image Optimization:
+
 - Compress images to <200KB for web performance
 - Use WebP format with JPG fallbacks
 - Maintain aspect ratios for responsive design
 
 ### SEO-Friendly Names:
+
 - Use descriptive filenames: "luxury-caribbean-villa.jpg" vs "IMG_001.jpg"
 - Include location keywords: "rum-cay-resort", "bahamas-marina"
 
 ### Brand Consistency:
+
 - Use similar color tones across images
 - Maintain luxury/premium aesthetic
 - Ensure images align with your brand story
@@ -84,12 +96,14 @@ public/images/
 ## 🎨 RECOMMENDED IMAGE THEMES:
 
 ### Real Estate Focus:
+
 - **Luxury**: High-end finishes, premium materials
 - **Sustainability**: Solar panels, green technology, eco-friendly design
 - **Caribbean Paradise**: Crystal blue waters, pristine beaches, tropical luxury
 - **Modern Architecture**: Contemporary design, glass facades, infinity pools
 
 ### Team & Testimonials:
+
 - **Professional**: Business attire, confident poses
 - **Diverse**: Different ages, ethnicities, backgrounds
 - **Approachable**: Friendly expressions, professional but warm

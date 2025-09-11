@@ -45,37 +45,25 @@
 
 :root {
   --radius: 0.625rem;
-  /* Premium Light Color Scheme */
-  /* Base: Very soft, airy background tones (60%) */
-  --background: oklch(0.99 0.005 60); /* Off-white with subtle warmth */
-  --foreground: oklch(0.15 0.02 240); /* Deep charcoal with slight cool tone */
+  /* Default Light Theme */
+  --background: oklch(0.99 0.005 60);
+  --foreground: oklch(0.15 0.02 240);
   --card: oklch(0.98 0.005 60);
   --card-foreground: oklch(0.15 0.02 240);
   --popover: oklch(0.98 0.005 60);
   --popover-foreground: oklch(0.15 0.02 240);
-  
-  /* Primary: Refined pastel tone - gentle sky blue */
-  --primary: oklch(0.7 0.08 220); /* Gentle sky blue */
+  --primary: oklch(0.7 0.08 220);
   --primary-foreground: oklch(0.98 0.005 60);
-  
-  /* Secondary: Muted warm neutrals (30%) */
-  --secondary: oklch(0.92 0.015 40); /* Soft beige */
+  --secondary: oklch(0.92 0.015 40);
   --secondary-foreground: oklch(0.25 0.02 40);
-  --muted: oklch(0.94 0.01 45); /* Light warm gray */
+  --muted: oklch(0.94 0.01 45);
   --muted-foreground: oklch(0.45 0.02 220);
-  
-  /* Accent: Elegant, uplifting hue - coral/blush (10%) */
-  --accent: oklch(0.75 0.12 25); /* Coral accent */
+  --accent: oklch(0.75 0.12 25);
   --accent-foreground: oklch(0.98 0.005 60);
-  
   --destructive: oklch(0.65 0.15 25);
   --border: oklch(0.9 0.01 40);
   --input: oklch(0.95 0.01 40);
   --ring: oklch(0.7 0.08 220);
-  
-  /* Custom SATOSHI colors */
-  --satoshi-mint: oklch(0.85 0.06 160); /* Gentle mint for highlights */
-  --satoshi-gold: oklch(0.8 0.1 75); /* Elegant gold accent */
   
   --chart-1: oklch(0.7 0.08 220);
   --chart-2: oklch(0.75 0.12 25);
@@ -90,40 +78,367 @@
   --sidebar-accent-foreground: oklch(0.25 0.02 40);
   --sidebar-border: oklch(0.9 0.01 40);
   --sidebar-ring: oklch(0.7 0.08 220);
+  
+  /* Light theme subtle pattern */
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(99, 102, 241, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(34, 197, 94, 0.015) 0%, transparent 50%),
+    linear-gradient(90deg, transparent 50%, rgba(251, 146, 60, 0.008) 50%);
+  background-size: 200px 200px, 150px 150px, 50px 50px;
 }
 
+[data-theme="light"] .hero-overlay {
+  background: linear-gradient(135deg, 
+    rgba(255, 255, 255, 0.1) 0%, 
+    rgba(241, 245, 249, 0.3) 50%, 
+    rgba(226, 232, 240, 0.5) 100%);
+}
+
+/* Dark Theme */
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
+  --background: oklch(0.09 0.01 240);
+  --foreground: oklch(0.98 0.005 60);
+  --card: oklch(0.12 0.01 240);
+  --card-foreground: oklch(0.98 0.005 60);
+  --popover: oklch(0.12 0.01 240);
+  --popover-foreground: oklch(0.98 0.005 60);
+  --primary: oklch(0.65 0.15 260);
+  --primary-foreground: oklch(0.98 0.005 60);
+  --secondary: oklch(0.18 0.01 240);
+  --secondary-foreground: oklch(0.85 0.01 60);
+  --muted: oklch(0.15 0.01 240);
+  --muted-foreground: oklch(0.65 0.02 220);
+  --accent: oklch(0.7 0.15 140);
+  --accent-foreground: oklch(0.98 0.005 60);
+  --destructive: oklch(0.65 0.15 25);
+  --border: oklch(0.2 0.01 240);
+  --input: oklch(0.18 0.01 240);
+  --ring: oklch(0.65 0.15 260);
+  
+  --chart-1: oklch(0.65 0.15 260);
+  --chart-2: oklch(0.7 0.15 140);
+  --chart-3: oklch(0.6 0.12 180);
+  --chart-4: oklch(0.7 0.15 60);
+  --chart-5: oklch(0.18 0.01 240);
+}
+
+[data-theme="dark"] {
+  background-image: 
+    radial-gradient(at 20% 80%, hsla(220, 100%, 20%, 0.15) 0px, transparent 50%),
+    radial-gradient(at 80% 20%, hsla(260, 100%, 30%, 0.15) 0px, transparent 50%),
+    radial-gradient(at 40% 40%, hsla(200, 100%, 25%, 0.1) 0px, transparent 50%);
+}
+
+[data-theme="dark"] .hero-overlay {
+  background: linear-gradient(135deg, 
+    rgba(30, 41, 59, 0.95) 0%, 
+    rgba(15, 23, 42, 0.98) 50%, 
+    rgba(2, 6, 23, 0.99) 100%);
+}
+
+/* Midnight Theme */
+[data-theme="midnight"] {
+  --background: oklch(0.06 0.015 240);
+  --foreground: oklch(0.95 0.005 60);
+  --card: oklch(0.08 0.015 240);
+  --card-foreground: oklch(0.95 0.005 60);
+  --popover: oklch(0.08 0.015 240);
+  --popover-foreground: oklch(0.95 0.005 60);
+  --primary: oklch(0.6 0.18 280);
+  --primary-foreground: oklch(0.95 0.005 60);
+  --secondary: oklch(0.12 0.01 240);
+  --secondary-foreground: oklch(0.8 0.01 60);
+  --muted: oklch(0.1 0.01 240);
+  --muted-foreground: oklch(0.6 0.02 220);
+  --accent: oklch(0.65 0.18 140);
+  --accent-foreground: oklch(0.95 0.005 60);
+  --destructive: oklch(0.65 0.15 25);
+  --border: oklch(0.15 0.01 240);
+  --input: oklch(0.12 0.01 240);
+  --ring: oklch(0.6 0.18 280);
+  
+  background-image: 
+    linear-gradient(45deg, rgba(15, 23, 42, 0.9) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(15, 23, 42, 0.9) 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, rgba(30, 41, 59, 0.4) 75%),
+    linear-gradient(-45deg, transparent 75%, rgba(30, 41, 59, 0.4) 75%);
+  background-size: 60px 60px;
+  background-position: 0 0, 0 30px, 30px -30px, -30px 0px;
+}
+
+[data-theme="midnight"] .hero-overlay {
+  background: linear-gradient(135deg, 
+    rgba(2, 6, 23, 0.98) 0%, 
+    rgba(15, 23, 42, 0.95) 50%, 
+    rgba(30, 41, 59, 0.92) 100%);
+  backdrop-filter: blur(1px);
+}
+
+/* Ocean Theme */
+[data-theme="ocean"] {
+  --background: oklch(0.08 0.02 220);
+  --foreground: oklch(0.98 0.005 60);
+  --card: oklch(0.1 0.02 220);
+  --card-foreground: oklch(0.98 0.005 60);
+  --popover: oklch(0.1 0.02 220);
+  --popover-foreground: oklch(0.98 0.005 60);
+  --primary: oklch(0.6 0.2 200);
+  --primary-foreground: oklch(0.98 0.005 60);
+  --secondary: oklch(0.15 0.015 220);
+  --secondary-foreground: oklch(0.85 0.01 60);
+  --muted: oklch(0.12 0.015 220);
+  --muted-foreground: oklch(0.65 0.02 200);
+  --accent: oklch(0.7 0.15 140);
+  --accent-foreground: oklch(0.98 0.005 60);
+  --destructive: oklch(0.65 0.15 25);
+  --border: oklch(0.18 0.015 220);
+  --input: oklch(0.15 0.015 220);
+  --ring: oklch(0.6 0.2 200);
+  
+  background-image: 
+    radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(14, 165, 233, 0.08) 0%, transparent 50%),
+    linear-gradient(90deg, transparent 50%, rgba(6, 182, 212, 0.03) 50%);
+  background-size: 100px 100px, 80px 80px, 40px 40px;
+}
+
+[data-theme="ocean"] .hero-overlay {
+  background: linear-gradient(135deg, 
+    rgba(1, 37, 59, 0.95) 0%, 
+    rgba(7, 89, 133, 0.9) 50%, 
+    rgba(14, 116, 144, 0.85) 100%);
+}
+
+/* Forest Theme */
+[data-theme="forest"] {
+  --background: oklch(0.07 0.015 120);
+  --foreground: oklch(0.95 0.005 60);
+  --card: oklch(0.09 0.015 120);
+  --card-foreground: oklch(0.95 0.005 60);
+  --popover: oklch(0.09 0.015 120);
+  --popover-foreground: oklch(0.95 0.005 60);
+  --primary: oklch(0.65 0.18 140);
+  --primary-foreground: oklch(0.95 0.005 60);
+  --secondary: oklch(0.14 0.01 120);
+  --secondary-foreground: oklch(0.8 0.01 60);
+  --muted: oklch(0.11 0.01 120);
+  --muted-foreground: oklch(0.6 0.02 140);
+  --accent: oklch(0.7 0.15 60);
+  --accent-foreground: oklch(0.95 0.005 60);
+  --destructive: oklch(0.65 0.15 25);
+  --border: oklch(0.16 0.01 120);
+  --input: oklch(0.14 0.01 120);
+  --ring: oklch(0.65 0.18 140);
+  
+  background-image: 
+    repeating-linear-gradient(45deg, 
+      rgba(34, 197, 94, 0.02) 0px, 
+      rgba(34, 197, 94, 0.02) 1px, 
+      transparent 1px, 
+      transparent 12px),
+    repeating-linear-gradient(-45deg, 
+      rgba(22, 163, 74, 0.03) 0px, 
+      rgba(22, 163, 74, 0.03) 1px, 
+      transparent 1px, 
+      transparent 12px);
+}
+
+[data-theme="forest"] .hero-overlay {
+  background: linear-gradient(135deg, 
+    rgba(5, 46, 22, 0.96) 0%, 
+    rgba(22, 78, 37, 0.92) 50%, 
+    rgba(34, 101, 47, 0.88) 100%);
+}
+
+/* Sunset Theme */
+[data-theme="sunset"] {
+  --background: oklch(0.08 0.02 15);
+  --foreground: oklch(0.95 0.005 40);
+  --card: oklch(0.1 0.02 15);
+  --card-foreground: oklch(0.95 0.005 40);
+  --popover: oklch(0.1 0.02 15);
+  --popover-foreground: oklch(0.95 0.005 40);
+  --primary: oklch(0.68 0.25 25);
+  --primary-foreground: oklch(0.95 0.005 40);
+  --secondary: oklch(0.15 0.015 15);
+  --secondary-foreground: oklch(0.85 0.01 40);
+  --muted: oklch(0.12 0.015 15);
+  --muted-foreground: oklch(0.65 0.02 25);
+  --accent: oklch(0.65 0.22 340);
+  --accent-foreground: oklch(0.95 0.005 40);
+  --destructive: oklch(0.65 0.15 25);
+  --border: oklch(0.18 0.015 15);
+  --input: oklch(0.15 0.015 15);
+  --ring: oklch(0.68 0.25 25);
+  
+  background-image: 
+    radial-gradient(ellipse at top, rgba(251, 146, 60, 0.1) 0%, transparent 70%),
+    radial-gradient(ellipse at bottom, rgba(239, 68, 68, 0.08) 0%, transparent 70%),
+    linear-gradient(45deg, rgba(245, 101, 101, 0.05) 25%, transparent 25%),
+    linear-gradient(-45deg, rgba(249, 115, 22, 0.05) 25%, transparent 25%);
+  background-size: 200px 200px, 300px 300px, 50px 50px, 50px 50px;
+}
+
+[data-theme="sunset"] .hero-overlay {
+  background: linear-gradient(135deg, 
+    rgba(69, 10, 10, 0.94) 0%, 
+    rgba(120, 53, 15, 0.91) 50%, 
+    rgba(180, 83, 9, 0.88) 100%);
+}
+
+/* Aurora Theme */
+[data-theme="aurora"] {
+  --background: oklch(0.06 0.02 260);
+  --foreground: oklch(0.95 0.005 300);
+  --card: oklch(0.08 0.02 260);
+  --card-foreground: oklch(0.95 0.005 300);
+  --popover: oklch(0.08 0.02 260);
+  --popover-foreground: oklch(0.95 0.005 300);
+  --primary: oklch(0.75 0.25 280);
+  --primary-foreground: oklch(0.95 0.005 300);
+  --secondary: oklch(0.14 0.015 260);
+  --secondary-foreground: oklch(0.85 0.01 300);
+  --muted: oklch(0.11 0.015 260);
+  --muted-foreground: oklch(0.65 0.02 280);
+  --accent: oklch(0.7 0.25 180);
+  --accent-foreground: oklch(0.95 0.005 300);
+  --destructive: oklch(0.65 0.15 25);
+  --border: oklch(0.16 0.015 260);
+  --input: oklch(0.14 0.015 260);
+  --ring: oklch(0.75 0.25 280);
+  
+  background-image: 
+    linear-gradient(45deg, rgba(168, 85, 247, 0.08) 0%, transparent 30%),
+    linear-gradient(135deg, rgba(34, 211, 238, 0.06) 0%, transparent 40%),
+    linear-gradient(225deg, rgba(147, 51, 234, 0.05) 0%, transparent 35%),
+    radial-gradient(circle at 30% 70%, rgba(59, 130, 246, 0.04) 0%, transparent 60%);
+  background-size: 150px 150px, 200px 200px, 120px 120px, 180px 180px;
+}
+
+[data-theme="aurora"] .hero-overlay {
+  background: linear-gradient(135deg, 
+    rgba(30, 27, 75, 0.96) 0%, 
+    rgba(67, 56, 202, 0.9) 30%, 
+    rgba(99, 102, 241, 0.85) 70%, 
+    rgba(139, 92, 246, 0.82) 100%);
+}
+
+/* Royal Theme */
+[data-theme="royal"] {
+  --background: oklch(0.05 0.025 250);
+  --foreground: oklch(0.95 0.005 50);
+  --card: oklch(0.07 0.025 250);
+  --card-foreground: oklch(0.95 0.005 50);
+  --popover: oklch(0.07 0.025 250);
+  --popover-foreground: oklch(0.95 0.005 50);
+  --primary: oklch(0.65 0.22 270);
+  --primary-foreground: oklch(0.95 0.005 50);
+  --secondary: oklch(0.12 0.02 250);
+  --secondary-foreground: oklch(0.85 0.01 50);
+  --muted: oklch(0.09 0.02 250);
+  --muted-foreground: oklch(0.6 0.02 270);
+  --accent: oklch(0.7 0.25 45);
+  --accent-foreground: oklch(0.95 0.005 50);
+  --destructive: oklch(0.65 0.15 25);
+  --border: oklch(0.15 0.02 250);
+  --input: oklch(0.12 0.02 250);
+  --ring: oklch(0.65 0.22 270);
+  
+  background-image: 
+    repeating-conic-gradient(from 0deg at 50% 50%, 
+      rgba(147, 51, 234, 0.06) 0deg, 
+      transparent 30deg, 
+      rgba(168, 85, 247, 0.04) 60deg, 
+      transparent 90deg),
+    radial-gradient(circle at 25% 25%, rgba(251, 191, 36, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 75% 75%, rgba(245, 158, 11, 0.06) 0%, transparent 50%);
+  background-size: 100px 100px, 200px 200px, 150px 150px;
+}
+
+[data-theme="royal"] .hero-overlay {
+  background: linear-gradient(135deg, 
+    rgba(24, 24, 27, 0.97) 0%, 
+    rgba(88, 28, 135, 0.93) 40%, 
+    rgba(147, 51, 234, 0.88) 80%, 
+    rgba(168, 85, 247, 0.85) 100%);
+}
+
+/* Cyber Theme */
+[data-theme="cyber"] {
+  --background: oklch(0.03 0.025 180);
+  --foreground: oklch(0.9 0.005 120);
+  --card: oklch(0.05 0.025 180);
+  --card-foreground: oklch(0.9 0.005 120);
+  --popover: oklch(0.05 0.025 180);
+  --popover-foreground: oklch(0.9 0.005 120);
+  --primary: oklch(0.7 0.3 120);
+  --primary-foreground: oklch(0.9 0.005 120);
+  --secondary: oklch(0.1 0.02 180);
+  --secondary-foreground: oklch(0.8 0.01 120);
+  --muted: oklch(0.07 0.02 180);
+  --muted-foreground: oklch(0.6 0.02 120);
+  --accent: oklch(0.75 0.3 300);
+  --accent-foreground: oklch(0.9 0.005 120);
+  --destructive: oklch(0.65 0.15 25);
+  --border: oklch(0.12 0.02 180);
+  --input: oklch(0.1 0.02 180);
+  --ring: oklch(0.7 0.3 120);
+  
+  background-image: 
+    linear-gradient(90deg, rgba(34, 197, 94, 0.1) 50%, transparent 50%),
+    linear-gradient(0deg, rgba(236, 72, 153, 0.08) 50%, transparent 50%),
+    repeating-linear-gradient(45deg, 
+      transparent, 
+      transparent 2px, 
+      rgba(34, 197, 94, 0.05) 2px, 
+      rgba(34, 197, 94, 0.05) 4px);
+  background-size: 20px 20px, 20px 20px, 40px 40px;
+}
+
+[data-theme="cyber"] .hero-overlay {
+  background: linear-gradient(135deg, 
+    rgba(2, 44, 34, 0.98) 0%, 
+    rgba(6, 78, 59, 0.94) 50%, 
+    rgba(16, 185, 129, 0.9) 100%);
+}
+
+/* Warm Theme */
+[data-theme="warm"] {
+  --background: oklch(0.07 0.02 30);
+  --foreground: oklch(0.92 0.005 30);
+  --card: oklch(0.09 0.02 30);
+  --card-foreground: oklch(0.92 0.005 30);
+  --popover: oklch(0.09 0.02 30);
+  --popover-foreground: oklch(0.92 0.005 30);
+  --primary: oklch(0.68 0.2 35);
+  --primary-foreground: oklch(0.92 0.005 30);
+  --secondary: oklch(0.14 0.015 30);
+  --secondary-foreground: oklch(0.82 0.01 30);
+  --muted: oklch(0.11 0.015 30);
+  --muted-foreground: oklch(0.6 0.02 35);
+  --accent: oklch(0.7 0.22 15);
+  --accent-foreground: oklch(0.92 0.005 30);
+  --destructive: oklch(0.65 0.15 25);
+  --border: oklch(0.16 0.015 30);
+  --input: oklch(0.14 0.015 30);
+  --ring: oklch(0.68 0.2 35);
+  
+  background-image: 
+    radial-gradient(circle at 20% 80%, rgba(251, 146, 60, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(245, 101, 101, 0.08) 0%, transparent 50%),
+    repeating-linear-gradient(60deg, 
+      rgba(252, 211, 77, 0.03) 0px, 
+      rgba(252, 211, 77, 0.03) 1px, 
+      transparent 1px, 
+      transparent 20px);
+  background-size: 150px 150px, 120px 120px, 30px 30px;
+}
+
+[data-theme="warm"] .hero-overlay {
+  background: linear-gradient(135deg, 
+    rgba(69, 26, 3, 0.95) 0%, 
+    rgba(120, 53, 15, 0.92) 50%, 
+    rgba(194, 65, 12, 0.88) 100%);
 }
 
 @layer base {
