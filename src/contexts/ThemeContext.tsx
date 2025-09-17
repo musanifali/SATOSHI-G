@@ -2,7 +2,7 @@
 
 import { createContext, useContext, useEffect, useState } from 'react'
 
-type Theme = 'light' | 'dark' | 'midnight' | 'ocean' | 'forest' | 'sunset' | 'aurora' | 'royal' | 'cyber' | 'warm'
+type Theme = 'light' | 'pearl' | 'cream' | 'sky' | 'mint' | 'rose' | 'lavender' | 'dark' | 'midnight' | 'ocean' | 'forest' | 'sunset' | 'aurora' | 'royal' | 'cyber' | 'warm'
 
 interface ThemeContextType {
   theme: Theme
@@ -33,6 +33,66 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
         foreground: 'hsl(222.2 84% 4.9%)',
         primary: 'hsl(262.1 83.3% 57.8%)',
         accent: 'hsl(142.1 76.2% 36.3%)'
+      }
+    },
+    {
+      name: 'pearl' as Theme,
+      label: 'Pearl',
+      colors: {
+        background: 'hsl(210 40% 98%)',
+        foreground: 'hsl(222.2 84% 4.9%)',
+        primary: 'hsl(210 100% 50%)',
+        accent: 'hsl(195 100% 45%)'
+      }
+    },
+    {
+      name: 'cream' as Theme,
+      label: 'Cream',
+      colors: {
+        background: 'hsl(45 100% 97%)',
+        foreground: 'hsl(25 25% 15%)',
+        primary: 'hsl(35 100% 50%)',
+        accent: 'hsl(25 100% 55%)'
+      }
+    },
+    {
+      name: 'sky' as Theme,
+      label: 'Sky',
+      colors: {
+        background: 'hsl(200 100% 97%)',
+        foreground: 'hsl(210 50% 10%)',
+        primary: 'hsl(200 100% 50%)',
+        accent: 'hsl(220 100% 60%)'
+      }
+    },
+    {
+      name: 'mint' as Theme,
+      label: 'Mint',
+      colors: {
+        background: 'hsl(150 60% 96%)',
+        foreground: 'hsl(150 25% 10%)',
+        primary: 'hsl(150 70% 40%)',
+        accent: 'hsl(170 80% 45%)'
+      }
+    },
+    {
+      name: 'rose' as Theme,
+      label: 'Rose',
+      colors: {
+        background: 'hsl(350 100% 97%)',
+        foreground: 'hsl(345 25% 15%)',
+        primary: 'hsl(350 100% 60%)',
+        accent: 'hsl(320 100% 65%)'
+      }
+    },
+    {
+      name: 'lavender' as Theme,
+      label: 'Lavender',
+      colors: {
+        background: 'hsl(270 100% 97%)',
+        foreground: 'hsl(270 25% 15%)',
+        primary: 'hsl(270 100% 60%)',
+        accent: 'hsl(290 100% 65%)'
       }
     },
     {
@@ -142,7 +202,8 @@ export function ThemeProvider({ children }: { children: React.ReactNode }) {
       root.setAttribute('data-theme', theme)
       
       // Update Tailwind's dark mode class
-      if (theme === 'light') {
+      const lightThemes = ['light', 'pearl', 'cream', 'sky', 'mint', 'rose', 'lavender']
+      if (lightThemes.includes(theme)) {
         root.classList.remove('dark')
       } else {
         root.classList.add('dark')

@@ -78,6 +78,12 @@ const ThemeSelector = () => {
                         <div className="font-medium text-sm">{themeOption.label}</div>
                         <div className="text-xs text-muted-foreground">
                           {themeOption.name === 'light' && 'Clean & bright'}
+                          {themeOption.name === 'pearl' && 'Soft & elegant'}
+                          {themeOption.name === 'cream' && 'Warm & cozy'}
+                          {themeOption.name === 'sky' && 'Fresh & airy'}
+                          {themeOption.name === 'mint' && 'Cool & refreshing'}
+                          {themeOption.name === 'rose' && 'Gentle & romantic'}
+                          {themeOption.name === 'lavender' && 'Calm & soothing'}
                           {themeOption.name === 'dark' && 'Easy on the eyes'}
                           {themeOption.name === 'midnight' && 'Deep & elegant'}
                           {themeOption.name === 'ocean' && 'Cool & professional'}
