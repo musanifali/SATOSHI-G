@@ -57,7 +57,7 @@ const ProjectDevelopmentSection = () => {
             <div className="grid md:grid-cols-2 gap-8 mb-8">
               {/* Left: Phase 1 Development Images */}
               <div className="space-y-6">
-                <div className="bg-gradient-to-br from-green-50 to-primary-50 rounded-2xl p-6">
+                <div className="bg-card border border-border rounded-2xl p-6">
                   <img 
                     src="/images/real-estate/luxury-villas-rum-cay.jpg"
                     alt="Phase 1 Luxury Villas - Sustainable Design"
@@ -67,7 +67,7 @@ const ProjectDevelopmentSection = () => {
                   <p className="text-muted-foreground text-sm">Exclusive waterfront properties with private beaches and sustainable energy systems.</p>
                 </div>
                 
-                <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-2xl p-6">
+                <div className="bg-card border border-border rounded-2xl p-6">
                   <img 
                     src="/images/real-estate/off-grid-infrastructure.jpg"
                     alt="Off-Grid Sustainable Infrastructure"
@@ -120,7 +120,7 @@ const ProjectDevelopmentSection = () => {
             </div>
 
             {/* Investment Opportunity */}
-            <div className="bg-gradient-to-r from-accent/10 to-primary/10 rounded-2xl p-8 text-center">
+            <div className="bg-card border border-border rounded-2xl p-8 text-center">
               <h4 className="text-2xl font-bold mb-4">Phase 1 Investment Opportunity</h4>
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
                 Secure your piece of paradise. Limited luxury properties available for fractional ownership starting at $100.
@@ -149,7 +149,7 @@ const ProjectDevelopmentSection = () => {
 
             {/* Phase 2 Real Estate Showcase */}
             <div className="grid md:grid-cols-3 gap-6 mb-8">
-              <div className="bg-gradient-to-br from-blue-50 to-primary-50 rounded-2xl p-6 text-center">
+              <div className="bg-card border border-border rounded-2xl p-6 text-center">
                 <img 
                   src="/images/real-estate/mega-yacht-marina.jpg"
                   alt="Mega-Yacht Marina & Resort Towers"
@@ -159,7 +159,7 @@ const ProjectDevelopmentSection = () => {
                 <p className="text-muted-foreground text-sm">21-story resort towers with luxury marina for superyachts</p>
               </div>
               
-              <div className="bg-gradient-to-br from-green-50 to-accent-50 rounded-2xl p-6 text-center">
+              <div className="bg-card border border-border rounded-2xl p-6 text-center">
                 <img 
                   src="/images/real-estate/championship-golf-course.jpg"
                   alt="Championship Golf Course"
@@ -169,7 +169,7 @@ const ProjectDevelopmentSection = () => {
                 <p className="text-muted-foreground text-sm">World-class 18-hole championship golf course</p>
               </div>
               
-              <div className="bg-gradient-to-br from-purple-50 to-pink-50 rounded-2xl p-6 text-center">
+              <div className="bg-card border border-border rounded-2xl p-6 text-center">
                 <img 
                   src="/images/real-estate/formula-e-racetrack.jpg"
                   alt="Formula E Racetrack & Entertainment"
@@ -181,7 +181,7 @@ const ProjectDevelopmentSection = () => {
             </div>
 
             {/* Phase 2 Investment */}
-            <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8 text-center">
+            <div className="bg-card border border-border rounded-2xl p-8 text-center">
               <h4 className="text-2xl font-bold mb-4">Phase 2 Pre-Investment</h4>
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
                 Early access to resort tower units and marina berths. Reserve your investment position for maximum returns.

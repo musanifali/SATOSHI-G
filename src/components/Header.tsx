@@ -17,54 +17,66 @@ const Header = () => {
     setIsMobileMenuOpen(false)
   }
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ 
+        behavior: 'smooth',
+        block: 'start'
+      })
+    }
+    closeMobileMenu()
+  }
+
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link 
           href="/" 
-          className="flex items-center"
+          className="flex items-center hover:opacity-80 transition-opacity"
           onClick={closeMobileMenu}
         >
           <img 
             src="/images/illustrations/satoshi logo.svg"
-            alt="SATOSHI Global Village"
+            alt="SATOSHI Global Village - Luxury Real Estate Investment Platform"
             className="h-8 w-auto dark:invert dark:brightness-0 dark:contrast-100"
+            loading="eager"
           />
         </Link>
 
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex items-center space-x-8">
-          <Link 
-            href="#project" 
+          <button 
+            onClick={() => scrollToSection('about')}
+            className="text-sm font-medium text-foreground transition-colors hover:text-primary"
+          >
+            About
+          </button>
+          <button 
+            onClick={() => scrollToSection('services')}
+            className="text-sm font-medium text-foreground transition-colors hover:text-primary"
+          >
+            Services
+          </button>
+          <button 
+            onClick={() => scrollToSection('project')}
             className="text-sm font-medium text-foreground transition-colors hover:text-primary"
           >
             Project
-          </Link>
-          <Link 
-            href="#tokenomics" 
+          </button>
+          <button 
+            onClick={() => scrollToSection('market')}
             className="text-sm font-medium text-foreground transition-colors hover:text-primary"
           >
-            Tokenomics
-          </Link>
-          <Link 
-            href="#team" 
+            Market
+          </button>
+          <button 
+            onClick={() => scrollToSection('testimonials')}
             className="text-sm font-medium text-foreground transition-colors hover:text-primary"
           >
-            Team
-          </Link>
-          <Link 
-            href="#rum-cay" 
-            className="text-sm font-medium text-foreground transition-colors hover:text-primary"
-          >
-            Rum Cay
-          </Link>
-          <Link 
-            href="#invest" 
-            className="text-sm font-medium text-foreground transition-colors hover:text-primary"
-          >
-            Invest
-          </Link>
+            Testimonials
+          </button>
         </nav>
 
         {/* Desktop Right side actions */}
@@ -102,41 +114,36 @@ const Header = () => {
           {/* Mobile Menu Panel */}
           <div className="fixed top-16 left-0 right-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/90 border-b border-border/40 z-40 md:hidden">
             <nav className="container mx-auto px-4 py-6 space-y-4">
-              <Link 
-                href="#project" 
-                className="block text-lg font-medium text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded-md hover:bg-muted/50"
-                onClick={closeMobileMenu}
+              <button 
+                onClick={() => scrollToSection('about')}
+                className="block text-lg font-medium text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded-md hover:bg-muted/50 w-full text-left"
+              >
+                About
+              </button>
+              <button 
+                onClick={() => scrollToSection('services')}
+                className="block text-lg font-medium text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded-md hover:bg-muted/50 w-full text-left"
+              >
+                Services
+              </button>
+              <button 
+                onClick={() => scrollToSection('project')}
+                className="block text-lg font-medium text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded-md hover:bg-muted/50 w-full text-left"
               >
                 Project
-              </Link>
-              <Link 
-                href="#tokenomics" 
-                className="block text-lg font-medium text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded-md hover:bg-muted/50"
-                onClick={closeMobileMenu}
+              </button>
+              <button 
+                onClick={() => scrollToSection('market')}
+                className="block text-lg font-medium text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded-md hover:bg-muted/50 w-full text-left"
               >
-                Tokenomics
-              </Link>
-              <Link 
-                href="#team" 
-                className="block text-lg font-medium text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded-md hover:bg-muted/50"
-                onClick={closeMobileMenu}
+                Market
+              </button>
+              <button 
+                onClick={() => scrollToSection('testimonials')}
+                className="block text-lg font-medium text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded-md hover:bg-muted/50 w-full text-left"
               >
-                Team
-              </Link>
-              <Link 
-                href="#rum-cay" 
-                className="block text-lg font-medium text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded-md hover:bg-muted/50"
-                onClick={closeMobileMenu}
-              >
-                Rum Cay
-              </Link>
-              <Link 
-                href="#invest" 
-                className="block text-lg font-medium text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded-md hover:bg-muted/50"
-                onClick={closeMobileMenu}
-              >
-                Invest
-              </Link>
+                Testimonials
+              </button>
               
               {/* Mobile Action Buttons */}
               <div className="pt-4 space-y-3 border-t border-border/40">

@@ -32,7 +32,11 @@ const HeroSection = () => {
               playsInline
               preload="metadata"
               onLoadedData={() => setVideoLoaded(true)}
-              onError={() => setVideoError(true)}
+              onError={(e) => {
+                console.error('Video loading error:', e);
+                setVideoError(true);
+              }}
+              onCanPlay={() => setVideoLoaded(true)}
               className="w-full h-full object-cover"
               style={{
                 maxWidth: '100%',
@@ -40,6 +44,7 @@ const HeroSection = () => {
               }}
             >
               <source src="/images/illustrations/video.mp4" type="video/mp4" />
+              <source src="/images/illustrations/video2.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
             

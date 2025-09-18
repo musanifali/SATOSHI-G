@@ -28,15 +28,25 @@ export default function Home() {
       <MetricsSection />
       
       {/* 🏢 COMPANY & SERVICES */}
-      <AboutSection />
-      <WhatWeDoSection />
-      <ProjectDevelopmentSection />
+      <div id="about">
+        <AboutSection />
+      </div>
+      <div id="services">
+        <WhatWeDoSection />
+      </div>
+      <div id="project">
+        <ProjectDevelopmentSection />
+      </div>
       
       {/* 💼 INVESTMENT OPPORTUNITY */}
       {/* <ProblemSolutionSection /> */}
-      <MarketOpportunitySection />
+      <div id="market">
+        <MarketOpportunitySection />
+      </div>
       <HowItWorksSection />
-      <TestimonialsSection />
+      <div id="testimonials">
+        <TestimonialsSection />
+      </div>
       
       {/* 🏗️ DEVELOPMENT SPECIFIC (For later) */}
       {/* <TokenomicsSection /> */}

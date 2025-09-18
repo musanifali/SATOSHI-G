@@ -13,15 +13,13 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <Link 
               href="/" 
-              className="flex items-center space-x-3 font-bold text-xl mb-6"
+              className="flex items-center mb-6"
             >
-              <div className="w-10 h-10 bg-gradient-to-br from-accent to-primary rounded-lg flex items-center justify-center">
-                <Bitcoin className="w-6 h-6 text-white" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-primary text-xl leading-tight">SATOSHI</span>
-                <span className="text-accent text-sm font-medium leading-tight">Global Village</span>
-              </div>
+              <img 
+                src="/images/illustrations/satoshi logo.svg"
+                alt="SATOSHI Global Village"
+                className="h-12 w-auto dark:invert dark:brightness-0 dark:contrast-100"
+              />
             </Link>
             
             <p className="text-muted-foreground leading-relaxed mb-6">

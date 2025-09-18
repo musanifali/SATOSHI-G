@@ -1,3 +1,5 @@
+"use client"
+
 const WhatWeDoSection = () => {
   return (
     <section className="py-16 md:py-24 lg:py-32 bg-background">
@@ -30,15 +32,30 @@ const WhatWeDoSection = () => {
           </div>
           
           <div className="relative">
-            {/* Main Ecosystem Illustration */}
+            {/* Main Ecosystem Video */}
             <div className="bg-gradient-to-br from-primary/10 via-accent/5 to-primary/10 rounded-2xl p-8 mb-6">
-              <img 
-                src="/images/real-estate/real-estate-ecosystem.jpg"
-                alt="SATOSHI Real Estate Ecosystem - Complete Platform"
+              <video
+                autoPlay
+                muted
+                loop
+                playsInline
                 className="w-full h-64 object-cover rounded-xl shadow-lg"
-              />
+                onError={(e) => {
+                  console.error('Video failed to load:', e);
+                  // Fallback to image if video fails
+                  const target = e.target as HTMLVideoElement;
+                  const img = document.createElement('img');
+                  img.src = '/images/real-estate/real-estate-ecosystem.jpg';
+                  img.alt = 'SATOSHI Real Estate Ecosystem - Complete Platform';
+                  img.className = 'w-full h-64 object-cover rounded-xl shadow-lg';
+                  target.parentNode?.replaceChild(img, target);
+                }}
+              >
+                <source src="/images/illustrations/video2.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
             </div>
-            
+          
             {/* Stats Grid Below Image */}
             <div className="grid grid-cols-2 gap-4">
               <div className="bg-card border border-border rounded-lg p-6 text-center hover:shadow-lg transition-shadow">
