@@ -24,7 +24,7 @@ export default function Home() {
       
       {/* 🎯 HERO & TRUST */}
       <HeroSection />
-      <MetricsSection />
+      {/* <MetricsSection /> */}
       
       {/* 🏢 COMPANY & SERVICES */}
       <div id="about">
