@@ -3,11 +3,14 @@
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { LogIn, Phone, Bitcoin, Waves, Menu, X } from 'lucide-react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { usePathname } from 'next/navigation'
 import ThemeSelector from './ThemeSelector'
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const isHomePage = pathname === '/'
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
@@ -17,13 +20,19 @@ const Header = () => {
     setIsMobileMenuOpen(false)
   }
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId)
-    if (element) {
-      element.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      })
+  const handleSectionNavigation = (sectionId: string) => {
+    if (isHomePage) {
+      // If on homepage, scroll to section
+      const element = document.getElementById(sectionId)
+      if (element) {
+        element.scrollIntoView({ 
+          behavior: 'smooth',
+          block: 'start'
+        })
+      }
+    } else {
+      // If on another page, navigate to homepage with section
+      window.location.href = `/#${sectionId}`
     }
     closeMobileMenu()
   }
@@ -48,41 +57,35 @@ const Header = () => {
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex items-center space-x-8">
           <button 
-            onClick={() => scrollToSection('about')}
+            onClick={() => handleSectionNavigation('about')}
             className="text-sm font-medium text-foreground transition-colors hover:text-primary"
           >
             About
           </button>
           <button 
-            onClick={() => scrollToSection('services')}
+            onClick={() => handleSectionNavigation('services')}
             className="text-sm font-medium text-foreground transition-colors hover:text-primary"
           >
             Services
           </button>
-          <button 
-            onClick={() => scrollToSection('project')}
+          <Link 
+            href="/projects/paradise-development"
             className="text-sm font-medium text-foreground transition-colors hover:text-primary"
           >
-            Project
-          </button>
+            Projects
+          </Link>
           <button 
-            onClick={() => scrollToSection('market')}
+            onClick={() => handleSectionNavigation('market')}
             className="text-sm font-medium text-foreground transition-colors hover:text-primary"
           >
             Market
-          </button>
-          <button 
-            onClick={() => scrollToSection('testimonials')}
-            className="text-sm font-medium text-foreground transition-colors hover:text-primary"
-          >
-            Testimonials
           </button>
         </nav>
 
         {/* Desktop Right side actions */}
         <div className="hidden md:flex items-center space-x-4">
           <ThemeSelector />
-          <Button size="sm" className="bg-gradient-to-r from-accent to-primary hover:from-accent/90 hover:to-primary/90 text-white">
+          <Button size="sm" className="bg-accent hover:bg-accent/90">
             <Bitcoin className="mr-2 h-4 w-4" />
            Get Started 
           </Button>
@@ -115,34 +118,29 @@ const Header = () => {
           <div className="fixed top-16 left-0 right-0 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/90 border-b border-border/40 z-40 md:hidden">
             <nav className="container mx-auto px-4 py-6 space-y-4">
               <button 
-                onClick={() => scrollToSection('about')}
+                onClick={() => handleSectionNavigation('about')}
                 className="block text-lg font-medium text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded-md hover:bg-muted/50 w-full text-left"
               >
                 About
               </button>
               <button 
-                onClick={() => scrollToSection('services')}
+                onClick={() => handleSectionNavigation('services')}
                 className="block text-lg font-medium text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded-md hover:bg-muted/50 w-full text-left"
               >
                 Services
               </button>
-              <button 
-                onClick={() => scrollToSection('project')}
+              <Link 
+                href="/projects/paradise-development"
+                onClick={closeMobileMenu}
                 className="block text-lg font-medium text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded-md hover:bg-muted/50 w-full text-left"
               >
-                Project
-              </button>
+                Projects
+              </Link>
               <button 
-                onClick={() => scrollToSection('market')}
+                onClick={() => handleSectionNavigation('market')}
                 className="block text-lg font-medium text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded-md hover:bg-muted/50 w-full text-left"
               >
                 Market
-              </button>
-              <button 
-                onClick={() => scrollToSection('testimonials')}
-                className="block text-lg font-medium text-muted-foreground hover:text-foreground transition-colors py-2 px-2 rounded-md hover:bg-muted/50 w-full text-left"
-              >
-                Testimonials
               </button>
               
               {/* Mobile Action Buttons */}
@@ -152,7 +150,7 @@ const Header = () => {
                 </div>
                 <Button 
                   size="sm" 
-                  className="w-full bg-gradient-to-r from-accent to-primary hover:from-accent/90 hover:to-primary/90 text-white"
+                  className="w-full bg-accent hover:bg-accent/90"
                   onClick={closeMobileMenu}
                 >
                   <Bitcoin className="mr-2 h-4 w-4" />

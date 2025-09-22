@@ -7,7 +7,6 @@ import TestimonialsSection from '@/components/TestimonialsSection'
 import ProblemSolutionSection from '@/components/ProblemSolutionSection'
 import MarketOpportunitySection from '@/components/MarketOpportunitySection'
 import HowItWorksSection from '@/components/HowItWorksSection'
-import ProjectDevelopmentSection from '@/components/ProjectDevelopmentSection'
 import TokenomicsSection from '@/components/TokenomicsSection'
 import TargetUsersSection from '@/components/TargetUsersSection'
 import SustainabilitySection from '@/components/SustainabilitySection'
@@ -33,9 +32,6 @@ export default function Home() {
       </div>
       <div id="services">
         <WhatWeDoSection />
-      </div>
-      <div id="project">
-        <ProjectDevelopmentSection />
       </div>
       
       {/* 💼 INVESTMENT OPPORTUNITY */}
