@@ -40,9 +40,9 @@ export default function Home() {
         <MarketOpportunitySection />
       </div>
       <HowItWorksSection />
-      <div id="testimonials">
+      {/* <div id="testimonials">
         <TestimonialsSection />
-      </div>
+      </div> */}
       
       {/* 🏗️ DEVELOPMENT SPECIFIC (For later) */}
       {/* <TokenomicsSection /> */}
